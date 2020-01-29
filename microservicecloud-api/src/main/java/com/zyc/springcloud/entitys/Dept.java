@@ -18,4 +18,6 @@ public class Dept implements Serializable {
     public Dept(String dname) {
         this.dname = dname;
     }
+
+
 }

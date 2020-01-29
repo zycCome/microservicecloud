@@ -22,7 +22,12 @@ public class DeptController_Feign
     @RequestMapping(value = "/consumer/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id)
     {
-        return this.service.get(id);
+        Dept dept=  this.service.get(id);
+        if(dept == null){
+            System.out.println("null");
+
+        }
+        return dept;
     }
 
     @RequestMapping(value = "/consumer/dept/list")
